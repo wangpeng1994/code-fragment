@@ -1,0 +1,17 @@
+body {
+	padding: 0;
+  margin: 0;
+	width: 1920px; /* 以假设的固定宽高像素进行开发 */
+	height: 1080px;
+	transform: scale(0.5);
+	transform-origin: left top 0px;
+	overflow: hidden;
+	font-family: 'Microsoft YaHei', 'Microsoft YaHei Regular', 'Arial';
+}
+
+#pageWrap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+  background: url('./image/bg.png');
+}

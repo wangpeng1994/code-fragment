@@ -3,4 +3,4 @@
 
 # todo
 - React Draggable HOC
-- React + Antd Atachment Component
+- React + Antd Attachment Component

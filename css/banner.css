@@ -1,5 +1,3 @@
-@import "~assets/img/support/excellent/field/sprite-field";
-
 /* 一种PC端可行的banner样式策 */
 /* 使用background，banner不会变形，有较好的自适应性 */
 .banner {
@@ -7,4 +5,11 @@
   min-width: 1200px;
   background: #f5f9fc url('~assets/img/support/excellent/banner.png') center center no-repeat;
   background-size: cover;
+}
+
+/* 其它：高分屏下 */
+@media (min-width: 1920px) {
+  body {
+    background-size: 100%;
+  }
 }

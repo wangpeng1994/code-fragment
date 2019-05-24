@@ -1,0 +1,38 @@
+/* 函数定义 @mixin 和 @include */
+@mixin support-banner($url){
+  height: 420px;
+  min-width: 1200px;
+  background: #f5f9fc url($url) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+/* 传参并使用 */
+@include support-banner('~assets/img/support/excellent/banner.png');
+
+
+/* 属性扩展借用 @extend */
+.icons-index-price {
+  @extend .icons-index-price-white;
+  width: 16px;
+}
+
+
+/* 属性的遍历 @each */
+$fields: city, data, education, medical, robot, vehicle;
+@each $field in $fields {
+  &.#{$field} {
+    background: url('~assets/img/support/excellent/field/bg/#{$field}.png');
+  }
+}
+
+/* @each + @extend */
+li {
+  &:hover {
+    $logos: jd, lenovo, micosoft, intel, aa, tusstar, ingdan, leiphone, joychuang, freesfund, chuangyebang, 36kr;
+    @each $logo in $logos {
+      .icons-cooperation-logo-#{$logo}-gray {
+        @extend .icons-cooperation-logo-#{$logo};
+      }
+    }
+  }
+}
